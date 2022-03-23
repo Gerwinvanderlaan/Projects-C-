@@ -11,6 +11,43 @@ namespace ConsoleApp1
             static void Main(string[] args)
         {
         
+        EXERCISE 3: SUM OF MULTIPLE INPUTS (ALSO ARRAY)
+        
+        static void Main(string[] args)
+        {
+            Sum(5);
+            Sum(5, 10, 15);
+            Sum(5, 1, 3, 4, 2);
+
+            int[] myArray = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+            Sum(myArray);
+        }
+        public static void Sum(params int[] myArray)
+        {
+            int sum = 0;
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                sum += myArray[i];
+            }
+            Console.WriteLine("The sum is {0, 9}", sum);
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number");
+            int number = int.Parse(Console.ReadLine());
+            int summed = Sum(number);
+            Console.WriteLine("{0} summed is {1}", number, summed);
+        }
+        public static int Sum(params int[] number)
+        {
+            for (int i = 0; i < number.Length; i++)
+            {
+                int answer = number[i] + number[i];
+                return answer;
+            }
+        }
+        
         //EXERCISE 2: SQAURED AND CUBED (in Square())
         FOUT
         //{
